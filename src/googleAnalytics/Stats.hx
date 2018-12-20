@@ -90,7 +90,8 @@ class Stats {
 
 		#if (openfl && !flash && !html5)
 			#if (!openfl_legacy)
-			version+="/" + Lib.application.config.packageName + "." + Lib.application.config.version;
+			//version+="/" + Lib.application.config.packageName + "." + Lib.application.config.version;
+			version += "/" + lime.app.Application.current.meta.get("packageName") + "." + lime.app.Application.current.meta.get("version");
 			#else
 			version+="/" + Lib.packageName + "." + Lib.version;
 			#end
